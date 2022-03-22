@@ -11,10 +11,18 @@
 
             gtag('config', 'G-LJ5F7S8C6L');
         </script>
+        <!-- 
+            Charset, viewport and other tags
+         -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Open+Sans:wght@300&family=Playfair+Display&family=Quicksand:wght@300&display=swap" rel="stylesheet">
         <link rel="icon" href="images/favicon_main.png">
-        <!-- Link to the stylesheet -->
+        <!-- 
+            Link to the stylesheet 
+        -->
         <link rel="stylesheet" href="css/style.css">
         <title>Abdul Wasay</title>
     </head>
@@ -22,40 +30,31 @@
     <body>
         <header>
             <div id="main-navbar-div">
+                <button class="dropdown-btn">Menu</button>
                 <nav id="main-navbar">
-                    <ul>
-                        <li class="active-nav">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="projectnavigation.html">Projects</a>
-                        </li>
-                        <li>
-                            <a href="aboutme.html">About me</a>
-                        </li>
-                        <li>
-                            <a href="graphicdesign.html">Illustrations</a>
-                        </li>
-                        <li>
-                            <a href="resume.html">Resume</a>
-                        </li>
-                    </ul>
+                    <a class = "active-nav" href="index.html">Home</a>
+                    <a href="projectnavigation.html">Projects</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="graphicdesign.html">Illustrations</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="form.html">Contact Me</a>
                 </nav>
             </div>
             <h1 id="main-h1" class = "title">Hello world!</h1>
         </header>
 
         <main>
-           
-            <img id = "main-img" src="./images/main-page-image.jpg" alt = "A macbook laptop with a sunny bright beach in the background">
-            
+           <div id = "intro-section">
+                <a href="https://voyager.jpl.nasa.gov/golden-record/golden-record-cover/"><img id = "main-img" src="./images/golden_record.png" alt = "The golden record carried on board the Voyager 1 and 2 spacecraft"></a>
+                
 
-            <div id = "main-intro-div">
-                <p class="main-intro-text">My name is Abdul Wasay.</p> 
-                <p class="main-intro-text">I believe in the power of technology to <strong>inspire communities, empower people and advance humanity.</strong></p> 
-                <p class="main-intro-text">I've been working towards these goals of mine since my undergraduate days and continue to do so now as a 1st year graduate student at 
-                    the University of Michigan studying Information Science with a focus in Applied Data Science and Social Computing.</p>
-            </div>
+                <div id = "main-intro-div">
+                    <p class="main-intro-text">My name is Abdul Wasay.</p> 
+                    <p class="main-intro-text">I believe in the power of technology to <br><strong id = "main-intro-goal-title">inspire communities,</strong> <br><strong id = "main-intro-goal-title">empower people and</strong> <br><strong id = "main-intro-goal-title">advance humanity.</strong></p> 
+                    <p class="main-intro-text">I've been working towards these goals of mine since my undergraduate days and continue to do so now as a 1st year graduate student at 
+                        the University of Michigan studying Information Science with a focus in Applied Data Science and Social Computing.</p>
+                </div>
+           </div>
 
             <div id="goal-description">
                 <h2 class="title">What do my goals mean?</h2>

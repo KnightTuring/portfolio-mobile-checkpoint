@@ -1,66 +1,162 @@
+main {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-h1 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
 .title {
     text-align: center;
     text-transform: capitalize;
 }
 
-#main-navbar {
-    background-color: #075392;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 8px;
-    text-align: center;
+.dropdown-btn {
+    display: none;
 }
 
-#main-navbar ul li{
-    display: inline;
+#main-navbar-div {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#main-navbar {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+    
+    #main-img,  #main-img:hover {
+        visibility: hidden;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .dropdown-btn {
+        display: block;
+        text-transform: uppercase;
+        border-radius: 20px;
+        border: 2px solid white;
+        padding: 5px;
+        margin: 5px;
+        align-items: center;
+    }
+
+    #main-navbar-div {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #main-navbar {
+        display: none;
+        position: absolute;
+        z-index: 1;
+    }
+
+    #main-navbar a{
+        display: block;
+    }
+
+    #main-navbar-div:hover {
+        display: flex;
+        position: relative;
+        flex-direction: column !important;
+        background-color: whitesmoke;
+    }
+
+    #main-navbar-div:hover #main-navbar{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: whitesmoke;
+    }
+}
+
+#main-navbar-div a, button {
     margin: 10px;
     padding: 10px;
     border-radius: 20px;
-    border: 2px solid white;
+    border: 1px solid black;
     align-items: center;
 }
 
-#main-navbar ul li:hover{
-    background-color: white;
-    color: #075392;
+#main-navbar-div a:hover, button:hover{
+    background-color: black;
+    color: whitesmoke;
 }
 
-#main-navbar ul li a{
+#main-navbar-div a{
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: black;
 }
 
-#main-navbar ul li:hover a{
-    color: #075392;
+#main-navbar-div ul li:hover a{
+    color: whitesmoke;
+}
+
+#main-intro-goal-title {
+    font-size: x-large;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#intro-section {
+    display: grid;
+    grid-template-columns: 3;    
+}
+
+a {
+    grid-column: 1 / span 1;
+    justify-self: right;
+    align-self: center;
 }
 
 #main-img {
-    width: 20%;
+    grid-column: 1 / span 1;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    width: 60%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     padding: 5px;
-    border-radius: 5px;
-    box-shadow: 10px 10px orange;
+    animation: imgmove;
+    animation-duration: 4s;
+}
+
+@keyframes imgmove {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
 }
 
 #main-img:hover {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    box-shadow: 10px 10px 5px 10px orange;
+    width: 70%;
+}
+
+#main-intro-div {
+    grid-column: 2 /  span 2;
 }
 
 .active-nav {
-    background-color: white;
-}
-
-.active-nav a {
-    color: #075392 !important;
+    background-color: black;
+    color: whitesmoke !important;
 }
 
 .main-intro-text {
@@ -75,12 +171,29 @@
     margin-bottom: 55px;
 }
 
+.title {
+    font-family: 'Cormorant Garamond', serif;
+}
+
 .goals-title {
     margin-left: 40px;
     margin-right: 40px;
-    text-align: center;
-    background-color: yellowgreen;
+    padding-left: 10px;
+    text-align: left;
+    font-size: x-large;
+    font-family: 'Cormorant Garamond', serif;
 }
+
+.goals-title:nth-child(2) {
+    background-color: aquamarine;
+}
+.goals-title:nth-child(4) {
+    background-color: orange;
+}
+.goals-title:nth-child(6) {
+    background-color: greenyellow;
+}
+
 
 .illustration-img {
     width:400px;
@@ -162,5 +275,22 @@ figcaption {
     text-align: center;
     text-decoration: wavy;
     font-size: small;
+}
+
+.footer-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+form {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-body {
+    background-image: url('/images/bg-img.jpg');
 }
 
