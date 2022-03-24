@@ -32,9 +32,12 @@ main {
 }
 
 @media screen and (max-width: 750px) {
-    
-    #main-img,  #main-img:hover {
-        visibility: hidden;
+    #main-img,  #main-img:hover, #intro-section a{
+        display: none;
+    }
+
+    #main-intro-div {
+        text-align: center;
     }
 
     header {
@@ -82,6 +85,10 @@ main {
         flex-direction: column;
         background-color: whitesmoke;
     }
+
+    .goals-title {
+        text-align: center !important;
+    }
 }
 
 #main-navbar-div a, button {
@@ -107,7 +114,7 @@ main {
     color: whitesmoke;
 }
 
-#main-intro-goal-title {
+.main-intro-goal-title {
     font-size: x-large;
     font-style: italic;
     text-decoration: underline;
@@ -176,8 +183,6 @@ main {
 }
 
 .goals-explanation {
-    margin-left: 30px;
-    margin-right: 30px;
     margin-bottom: 55px;
 }
 
@@ -186,8 +191,6 @@ main {
 }
 
 .goals-title {
-    margin-left: 40px;
-    margin-right: 40px;
     padding-left: 10px;
     text-align: left;
     font-size: x-large;
@@ -206,23 +209,27 @@ main {
 
 
 .illustration-img {
-    width:400px;
+    width:70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5px;
-    padding: 12px;
-    box-shadow: 10px 10px green;
+    border-radius: 2px;
+    /* box-shadow: 5px 5px whitesmoke; */
+    /* Credits: https://css-tricks.com/make-a-smooth-shadow-friend/ */
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
 }
 
 .illustration-img:hover {
-    width:400px;
+    width:75%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5px;
-    padding: 12px;
-    box-shadow: 10px 10px 2px 10px green;
 }
 
 .design-timeline-heading {
@@ -247,7 +254,14 @@ main {
     border-radius: 5px black;
     margin-top: 35px;
     margin-bottom: 35px;
-    box-shadow: 2px 2px 2px 2px wheat;
+    /* Credits: https://css-tricks.com/make-a-smooth-shadow-friend/ */
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
     animation: imgmove 4s;
 }
 
@@ -283,8 +297,6 @@ main {
 
 figcaption {
     padding: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
     margin-top: 10px;
     margin-bottom: 15px;
     text-align: center;
