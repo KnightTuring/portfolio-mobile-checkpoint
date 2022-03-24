@@ -146,6 +146,16 @@ main {
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    #main-img {
+        animation: none;
+    }
+
+    #main-img:hover {
+        width: 60%  !important;
+    }
+}
+
 #main-img:hover {
     width: 70%;
 }
